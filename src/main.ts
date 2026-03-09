@@ -3,6 +3,8 @@ import { AppModule } from './app.module';
 import { Logger, ValidationPipe, VersioningType } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
 import { SwaggerModule, DocumentBuilder } from '@nestjs/swagger';
+import { AllExceptionFilter } from './common/filter/all-exceptions.filter';
+import { TransformResponseInterceptor } from './common/interceptor/transform-response.interceptor';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
@@ -24,6 +26,10 @@ async function bootstrap() {
         configService.get<string>('NODE_ENV') === 'production',
     }),
   );
+
+  app.useGlobalFilters(new AllExceptionFilter());
+
+  app.useGlobalInterceptors(new TransformResponseInterceptor());
 
   const config = new DocumentBuilder()
     .setTitle('JWKS Authentication API')

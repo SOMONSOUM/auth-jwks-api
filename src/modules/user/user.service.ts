@@ -16,7 +16,7 @@ export class UserService {
     });
 
     if (user) {
-      throw new HttpException('User already exists', HttpStatus.BAD_REQUEST);
+      throw new HttpException('User already exists', HttpStatus.CONFLICT);
     }
 
     data.password = await this.passwordService.hashPassword(data.password);

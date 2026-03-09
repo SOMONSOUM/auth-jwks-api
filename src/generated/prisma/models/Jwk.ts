@@ -55,7 +55,6 @@ export type JwkMaxAggregateOutputType = {
 export type JwkCountAggregateOutputType = {
   id: number
   kid: number
-  privateKey: number
   publicKey: number
   algorithm: number
   status: number
@@ -94,7 +93,6 @@ export type JwkMaxAggregateInputType = {
 export type JwkCountAggregateInputType = {
   id?: true
   kid?: true
-  privateKey?: true
   publicKey?: true
   algorithm?: true
   status?: true
@@ -192,7 +190,6 @@ export type JwkGroupByArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs
 export type JwkGroupByOutputType = {
   id: number
   kid: string
-  privateKey: runtime.JsonValue
   publicKey: runtime.JsonValue
   algorithm: string
   status: $Enums.KeyStatus
@@ -226,7 +223,6 @@ export type JwkWhereInput = {
   NOT?: Prisma.JwkWhereInput | Prisma.JwkWhereInput[]
   id?: Prisma.IntFilter<"Jwk"> | number
   kid?: Prisma.StringFilter<"Jwk"> | string
-  privateKey?: Prisma.JsonFilter<"Jwk">
   publicKey?: Prisma.JsonFilter<"Jwk">
   algorithm?: Prisma.StringFilter<"Jwk"> | string
   status?: Prisma.EnumKeyStatusFilter<"Jwk"> | $Enums.KeyStatus
@@ -238,7 +234,6 @@ export type JwkWhereInput = {
 export type JwkOrderByWithRelationInput = {
   id?: Prisma.SortOrder
   kid?: Prisma.SortOrder
-  privateKey?: Prisma.SortOrder
   publicKey?: Prisma.SortOrder
   algorithm?: Prisma.SortOrder
   status?: Prisma.SortOrder
@@ -254,7 +249,6 @@ export type JwkWhereUniqueInput = Prisma.AtLeast<{
   AND?: Prisma.JwkWhereInput | Prisma.JwkWhereInput[]
   OR?: Prisma.JwkWhereInput[]
   NOT?: Prisma.JwkWhereInput | Prisma.JwkWhereInput[]
-  privateKey?: Prisma.JsonFilter<"Jwk">
   publicKey?: Prisma.JsonFilter<"Jwk">
   algorithm?: Prisma.StringFilter<"Jwk"> | string
   status?: Prisma.EnumKeyStatusFilter<"Jwk"> | $Enums.KeyStatus
@@ -266,7 +260,6 @@ export type JwkWhereUniqueInput = Prisma.AtLeast<{
 export type JwkOrderByWithAggregationInput = {
   id?: Prisma.SortOrder
   kid?: Prisma.SortOrder
-  privateKey?: Prisma.SortOrder
   publicKey?: Prisma.SortOrder
   algorithm?: Prisma.SortOrder
   status?: Prisma.SortOrder
@@ -285,7 +278,6 @@ export type JwkScalarWhereWithAggregatesInput = {
   NOT?: Prisma.JwkScalarWhereWithAggregatesInput | Prisma.JwkScalarWhereWithAggregatesInput[]
   id?: Prisma.IntWithAggregatesFilter<"Jwk"> | number
   kid?: Prisma.StringWithAggregatesFilter<"Jwk"> | string
-  privateKey?: Prisma.JsonWithAggregatesFilter<"Jwk">
   publicKey?: Prisma.JsonWithAggregatesFilter<"Jwk">
   algorithm?: Prisma.StringWithAggregatesFilter<"Jwk"> | string
   status?: Prisma.EnumKeyStatusWithAggregatesFilter<"Jwk"> | $Enums.KeyStatus
@@ -295,7 +287,6 @@ export type JwkScalarWhereWithAggregatesInput = {
 
 export type JwkCreateInput = {
   kid: string
-  privateKey: Prisma.JsonNullValueInput | runtime.InputJsonValue
   publicKey: Prisma.JsonNullValueInput | runtime.InputJsonValue
   algorithm: string
   status: $Enums.KeyStatus
@@ -307,7 +298,6 @@ export type JwkCreateInput = {
 export type JwkUncheckedCreateInput = {
   id?: number
   kid: string
-  privateKey: Prisma.JsonNullValueInput | runtime.InputJsonValue
   publicKey: Prisma.JsonNullValueInput | runtime.InputJsonValue
   algorithm: string
   status: $Enums.KeyStatus
@@ -318,7 +308,6 @@ export type JwkUncheckedCreateInput = {
 
 export type JwkUpdateInput = {
   kid?: Prisma.StringFieldUpdateOperationsInput | string
-  privateKey?: Prisma.JsonNullValueInput | runtime.InputJsonValue
   publicKey?: Prisma.JsonNullValueInput | runtime.InputJsonValue
   algorithm?: Prisma.StringFieldUpdateOperationsInput | string
   status?: Prisma.EnumKeyStatusFieldUpdateOperationsInput | $Enums.KeyStatus
@@ -330,7 +319,6 @@ export type JwkUpdateInput = {
 export type JwkUncheckedUpdateInput = {
   id?: Prisma.IntFieldUpdateOperationsInput | number
   kid?: Prisma.StringFieldUpdateOperationsInput | string
-  privateKey?: Prisma.JsonNullValueInput | runtime.InputJsonValue
   publicKey?: Prisma.JsonNullValueInput | runtime.InputJsonValue
   algorithm?: Prisma.StringFieldUpdateOperationsInput | string
   status?: Prisma.EnumKeyStatusFieldUpdateOperationsInput | $Enums.KeyStatus
@@ -342,7 +330,6 @@ export type JwkUncheckedUpdateInput = {
 export type JwkCreateManyInput = {
   id?: number
   kid: string
-  privateKey: Prisma.JsonNullValueInput | runtime.InputJsonValue
   publicKey: Prisma.JsonNullValueInput | runtime.InputJsonValue
   algorithm: string
   status: $Enums.KeyStatus
@@ -352,7 +339,6 @@ export type JwkCreateManyInput = {
 
 export type JwkUpdateManyMutationInput = {
   kid?: Prisma.StringFieldUpdateOperationsInput | string
-  privateKey?: Prisma.JsonNullValueInput | runtime.InputJsonValue
   publicKey?: Prisma.JsonNullValueInput | runtime.InputJsonValue
   algorithm?: Prisma.StringFieldUpdateOperationsInput | string
   status?: Prisma.EnumKeyStatusFieldUpdateOperationsInput | $Enums.KeyStatus
@@ -363,7 +349,6 @@ export type JwkUpdateManyMutationInput = {
 export type JwkUncheckedUpdateManyInput = {
   id?: Prisma.IntFieldUpdateOperationsInput | number
   kid?: Prisma.StringFieldUpdateOperationsInput | string
-  privateKey?: Prisma.JsonNullValueInput | runtime.InputJsonValue
   publicKey?: Prisma.JsonNullValueInput | runtime.InputJsonValue
   algorithm?: Prisma.StringFieldUpdateOperationsInput | string
   status?: Prisma.EnumKeyStatusFieldUpdateOperationsInput | $Enums.KeyStatus
@@ -385,7 +370,6 @@ export type JwkOrderByRelevanceInput = {
 export type JwkCountOrderByAggregateInput = {
   id?: Prisma.SortOrder
   kid?: Prisma.SortOrder
-  privateKey?: Prisma.SortOrder
   publicKey?: Prisma.SortOrder
   algorithm?: Prisma.SortOrder
   status?: Prisma.SortOrder
@@ -441,7 +425,6 @@ export type EnumKeyStatusFieldUpdateOperationsInput = {
 
 export type JwkCreateWithoutRefreshTokensInput = {
   kid: string
-  privateKey: Prisma.JsonNullValueInput | runtime.InputJsonValue
   publicKey: Prisma.JsonNullValueInput | runtime.InputJsonValue
   algorithm: string
   status: $Enums.KeyStatus
@@ -452,7 +435,6 @@ export type JwkCreateWithoutRefreshTokensInput = {
 export type JwkUncheckedCreateWithoutRefreshTokensInput = {
   id?: number
   kid: string
-  privateKey: Prisma.JsonNullValueInput | runtime.InputJsonValue
   publicKey: Prisma.JsonNullValueInput | runtime.InputJsonValue
   algorithm: string
   status: $Enums.KeyStatus
@@ -478,7 +460,6 @@ export type JwkUpdateToOneWithWhereWithoutRefreshTokensInput = {
 
 export type JwkUpdateWithoutRefreshTokensInput = {
   kid?: Prisma.StringFieldUpdateOperationsInput | string
-  privateKey?: Prisma.JsonNullValueInput | runtime.InputJsonValue
   publicKey?: Prisma.JsonNullValueInput | runtime.InputJsonValue
   algorithm?: Prisma.StringFieldUpdateOperationsInput | string
   status?: Prisma.EnumKeyStatusFieldUpdateOperationsInput | $Enums.KeyStatus
@@ -489,7 +470,6 @@ export type JwkUpdateWithoutRefreshTokensInput = {
 export type JwkUncheckedUpdateWithoutRefreshTokensInput = {
   id?: Prisma.IntFieldUpdateOperationsInput | number
   kid?: Prisma.StringFieldUpdateOperationsInput | string
-  privateKey?: Prisma.JsonNullValueInput | runtime.InputJsonValue
   publicKey?: Prisma.JsonNullValueInput | runtime.InputJsonValue
   algorithm?: Prisma.StringFieldUpdateOperationsInput | string
   status?: Prisma.EnumKeyStatusFieldUpdateOperationsInput | $Enums.KeyStatus
@@ -531,7 +511,6 @@ export type JwkCountOutputTypeCountRefreshTokensArgs<ExtArgs extends runtime.Typ
 export type JwkSelect<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetSelect<{
   id?: boolean
   kid?: boolean
-  privateKey?: boolean
   publicKey?: boolean
   algorithm?: boolean
   status?: boolean
@@ -546,7 +525,6 @@ export type JwkSelect<ExtArgs extends runtime.Types.Extensions.InternalArgs = ru
 export type JwkSelectScalar = {
   id?: boolean
   kid?: boolean
-  privateKey?: boolean
   publicKey?: boolean
   algorithm?: boolean
   status?: boolean
@@ -554,7 +532,7 @@ export type JwkSelectScalar = {
   updatedAt?: boolean
 }
 
-export type JwkOmit<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetOmit<"id" | "kid" | "privateKey" | "publicKey" | "algorithm" | "status" | "createdAt" | "updatedAt", ExtArgs["result"]["jwk"]>
+export type JwkOmit<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetOmit<"id" | "kid" | "publicKey" | "algorithm" | "status" | "createdAt" | "updatedAt", ExtArgs["result"]["jwk"]>
 export type JwkInclude<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   refreshTokens?: boolean | Prisma.Jwk$refreshTokensArgs<ExtArgs>
   _count?: boolean | Prisma.JwkCountOutputTypeDefaultArgs<ExtArgs>
@@ -568,7 +546,6 @@ export type $JwkPayload<ExtArgs extends runtime.Types.Extensions.InternalArgs = 
   scalars: runtime.Types.Extensions.GetPayloadResult<{
     id: number
     kid: string
-    privateKey: runtime.JsonValue
     publicKey: runtime.JsonValue
     algorithm: string
     status: $Enums.KeyStatus
@@ -946,7 +923,6 @@ export interface Prisma__JwkClient<T, Null = never, ExtArgs extends runtime.Type
 export interface JwkFieldRefs {
   readonly id: Prisma.FieldRef<"Jwk", 'Int'>
   readonly kid: Prisma.FieldRef<"Jwk", 'String'>
-  readonly privateKey: Prisma.FieldRef<"Jwk", 'Json'>
   readonly publicKey: Prisma.FieldRef<"Jwk", 'Json'>
   readonly algorithm: Prisma.FieldRef<"Jwk", 'String'>
   readonly status: Prisma.FieldRef<"Jwk", 'KeyStatus'>

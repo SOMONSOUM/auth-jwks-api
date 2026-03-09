@@ -6,6 +6,7 @@ import { PrismaModule } from './prisma/prisma.module';
 import { SecurityModule } from './shared/security/security.module';
 import { UserModule } from './modules/user/user.module';
 import { JwkModule } from './modules/jwk/jwk.module';
+import { AuthModule } from './modules/auth/auth.module';
 
 @Module({
   imports: [
@@ -17,6 +18,7 @@ import { JwkModule } from './modules/jwk/jwk.module';
     SecurityModule,
     UserModule,
     JwkModule,
+    AuthModule,
   ],
   controllers: [AppController],
   providers: [AppService],

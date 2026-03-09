@@ -100,7 +100,6 @@ export type RefreshTokenScalarFieldEnum = (typeof RefreshTokenScalarFieldEnum)[k
 export const JwkScalarFieldEnum = {
   id: 'id',
   kid: 'kid',
-  privateKey: 'privateKey',
   publicKey: 'publicKey',
   algorithm: 'algorithm',
   status: 'status',

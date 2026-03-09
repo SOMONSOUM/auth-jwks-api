@@ -17,12 +17,6 @@ export class JwkService {
     return this.prisma.jwk.create({
       data: {
         kid,
-        privateKey: {
-          ...privateJwk,
-          use: 'sig',
-          alg: 'RS256',
-          kid,
-        },
         publicKey: {
           ...publicJwk,
           use: 'sig',
